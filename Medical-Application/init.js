@@ -5,12 +5,15 @@ import app from "./app";	//서버
 
 dotenv.config();
 
-import "./models/Pharmacy";
+import "./models/Drugstore";
 import "./models/Hospital";
 
 
 app.listen(80,function(){	//서버를 실행 시키는 메소드
-        console.log('server 연결!');	
+        console.log('server 연결!');
+	
+//	connectDB();
+
 });
 
 

@@ -5,8 +5,8 @@ import bodyParser from "body-parser";
 import morgan from "morgan"; // middleware 로그 기록
 import helmet from "helmet"; //middlewware node js 앱의 보안에 도움
 import routes from "./routes";
-//import globalRouter2 from "./router/globalRouter2";
-import pharmacyRouter from "./router/pharmacyRouter";
+import globalRouter from "./router/globalRouter";
+import drugstoreRouter from "./router/drugstoreRouter";
 import hospitalRouter from "./router/hospitalRouter";
 
 
@@ -28,8 +28,8 @@ app.use(morgan("dev"));
 //app.use(routes.drugstore,drugstoreRouter);
 // 약국 관련
 
+app.use(routes.home,globalRouter);
 app.use(routes.hospital,hospitalRouter);
-app.use(routes.pharmacy,pharmacyRouter);
 //병원 관련
 
 export default app;

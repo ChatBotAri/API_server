@@ -26,7 +26,7 @@ globalRouter.get("/",function(req,res,next){
 	var xmlToJson = convert.xml2json(body,{compact : true,spaces:4});
 	//ﬁle에 저장하기 
 
-	fs.appendFile('pharmacy.json',xmlToJson,'utf8',(err)=> {
+	fs.appendFile('pharmacy22.json',xmlToJson,'utf8',(err)=> {
 		if(err) throw err;
 		console.log('appendFile');
 		});

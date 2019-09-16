@@ -2,8 +2,8 @@
 const HOME = "/";
 
 //약국
-const PHARMACY = "/pharmacy";
-const PHARMACY_NAME = "/pharmacyName";
+const DRUGSTORE = "/drugstore";
+const DRUGSTORE_NAME = "/drugstoreName";
 
 //병원
 const HOSPITAL = "/hospital";
@@ -13,8 +13,8 @@ const HOSPITAL_NAME = "/hospitalName";
 
 const routes = {
 	home : HOME,
-	pharmacy : PHARMACY,
-	pharmacyName : PHARMACY_NAME,
+	drugstore : DRUGSTORE,
+	drugstoreName : DRUGSTORE_NAME,
 	hospital : HOSPITAL,
 	hospitalName : HOSPITAL_NAME
 };

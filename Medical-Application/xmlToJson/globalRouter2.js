@@ -1,5 +1,5 @@
 const express = require('express');
-//const routes = require('../routes');
+const routes = require('../routes');
 const request = require('request');
 const urlencode = require('urlencode');
 const convert = require('xml-js');
@@ -27,7 +27,6 @@ globalRouter.get("/",function(req,res,next){
 	}
 	var xmlToJson = convert.xml2json(body,{compact : true,spaces:4});
 		
-	console.log("2");
 	//ﬁle에 저장하기 
 
 	fs.appendFile('hospital22.json',xmlToJson,'utf8',(err)=> {

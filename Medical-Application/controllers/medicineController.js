@@ -1,13 +1,12 @@
 import routes from "../routes";
 
-import Pharmacy from "../models/Pharmacy";
+import Medicine from "../models/Medicine";
 //import { database } from "../db";
 
 export const video = (req,res) => res.render("home",{pagetitle:"upload"});
 
 
-export const getPharmacyName = async (req,res) => {
-	console.log(1);
+export const getMedicineName = async (req,res) => {
 //	let db;
 	const {
 		query:{
@@ -16,17 +15,20 @@ export const getPharmacyName = async (req,res) => {
 	} = req;
 //	query 만들어 주는 부분
  
-	let pharmacys;
-	const quer = new RegExp(searchingBy)
+	var medicines;
+	console.log(medicines);
+	console.log(Medicine);
+	
 	try{
-		pharmacys = await Pharmacy.find({
-			"dutyName._text" : {
-				$regex :quer
+		medicines = await Medicine.find({
+			name: {
+				$regex : searchingBy
 			}
 		})
-		console.log(pharmacys);
+		console.log(medicines);
 	}catch(error){
 		console.log(error);
 	}
-	res.json(pharmacys);
+	res.json(medicines);
 };
+
